@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClickCallListener(_ sender: Any) {
-        guard let listenerAppUrl = URL(string: "listenerapp://"), UIApplication.shared.canOpenURL(listenerAppUrl) else {
+        guard let listenerAppUrl = URL(string: "listenerapp://?message=Hi+There!"), UIApplication.shared.canOpenURL(listenerAppUrl) else {
             print("Could not form URL to Listener App")
             return
         }
