@@ -10,8 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "MEssageReceived"), object: nil, queue: OperationQueue.main) { (notification) in
+            if let message = notification.object as? String {
+                self.label.text = message.removingPercentEncoding
+            }
+        }
         // Do any additional setup after loading the view.
     }
 

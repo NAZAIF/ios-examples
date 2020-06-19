@@ -37,6 +37,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print("source application = \(sendingAppID ?? "Unknown")")
             print(url)
             print(url.query ?? "No Query Found")
+            
+            var parameters = [String:String]()
+            if let queryString = url.query {
+                let queryItems = queryString.components(separatedBy: "&")
+                
+                for pair in queryItems {
+                    let item = pair.components(separatedBy: "=")
+                    if item.count == 2 {
+                        parameters[item[0]] = item[1]
+                    }
+                }
+                if let msg = parameters["message"] {
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MEssageReceived"), object: msg)
+                }
+            }
         }
     }
     

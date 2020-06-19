@@ -21,14 +21,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-E3-9Zd">
+                                <rect key="frame" x="186" y="494.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="64q-Vn-84F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Qz-NQ-uDz"/>
                             <constraint firstItem="64q-Vn-84F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Uw-ia-6oy"/>
+                            <constraint firstItem="WSf-E3-9Zd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LU6-yd-gM5"/>
+                            <constraint firstItem="WSf-E3-9Zd" firstAttribute="top" secondItem="64q-Vn-84F" secondAttribute="bottom" constant="36" id="t3x-6E-nfr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="WSf-E3-9Zd" id="dv6-QI-XGI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
