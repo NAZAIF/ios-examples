@@ -22,7 +22,7 @@ enum KeychainFacadeError: Error {
 
 class KeychainFacade {
     lazy var privateKey: SecKey? = {
-        guard let key = try? retrievePrivateKey(), key != nil else {
+        guard let key = try? retrievePrivateKey() else {
             return try? generatePrivateKey()
         }
         return key
